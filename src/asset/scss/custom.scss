@@ -1,0 +1,247 @@
+$sidebar-width:200px;
+$topbar-height:50px;
+$header-fix:100px;
+.App {
+    margin: 0;
+    font-family: 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+.App-link,
+.nav-link,
+a {
+    color: var(--bs-primary);
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--bs-primary)
+    }
+}
+
+.sidebar {
+    width: $sidebar-width;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #333;
+    z-index: 1031;
+
+    .list-group-item {
+        background: transparent;
+        border-color: #585858;
+        padding: 0;
+
+        .link,
+        a {
+            color: #9d9da6;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            &:hover,
+            &.active-link {
+                background: #1976d2;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.alert-wrapper {
+    max-width: 480px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1099;
+
+    .btn-close {
+        filter: invert(1);
+        background-size: 12px;
+    }
+}
+
+.cart-card {
+    border-bottom: 1px solid #dddddd;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.header-top {
+    padding-left: $sidebar-width;
+    height: $topbar-height;
+}
+
+.main-content {
+    padding-top: $topbar-height;
+    padding-left: $sidebar-width;
+}
+
+.login-container {
+    height: 100vh;
+}
+
+.login-form {
+    width: 400px;
+}
+
+.form-control,
+.form-select {
+    padding: 4px 12px;
+    border-radius: 0;
+    outline: none;
+    min-height: 32px;
+    font-size: inherit;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 4px 12px;
+    font-size: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.btn-sm {
+    min-height: 28px;
+    min-width: 34px;
+    font-size: inherit;
+}
+
+.btn-check:focus+.btn,
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+}
+
+.was-validated .form-control:invalid:focus,
+.form-control.is-invalid:focus {
+    box-shadow: none;
+}
+
+.form-label {
+    font-size: inherit;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.required {
+    >.form-label {
+        color: red;
+    }
+
+    >.form-label:after {
+        content: "*";
+    }
+
+    >.form-control,
+    >.form-select,
+    >.form-control:focus,
+    >.form-select:focus {
+        border-color: red;
+    }
+}
+
+.form-select option {
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    cursor: pointer;
+    &:checked {
+      background-color: #eceff3;
+    }
+    &:hover {
+      background-color: #d5e8fb;
+    }
+  }
+
+.my-cart-btn {
+    background-color: #9d9da6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .badge {
+        position: absolute;
+        top: -8px;
+        right: 24px;
+        height: 22px;
+        min-width: 22px;
+        padding: 0;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.height-fix {
+    height: calc(100vh - $header-fix);
+    overflow: auto;
+}
+.border {
+    border: 1px solid grey;
+}
+
+.border-bottom {
+    border-bottom: 1px solid grey;
+}
+
+.border-top {
+    border-top: 1px solid grey;
+}
+
+.border-left {
+    border-left: 1px solid grey;
+}
+
+.border-right {
+    border-right: 1px solid grey;
+}
+
+$lines: 1, 2, 3, 4, 5;
+
+@each $size in $lines {
+    .truncate-#{$size} {
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        line-height: 1;
+        -webkit-line-clamp: #{$size};
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.topbar-title {
+    min-height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+}
+.custome-chip{
+    display: inline-block;
+    padding:4px 8px;
+    background: #9d9da6;
+    border-radius: 15px;
+    color: #fff;
+}

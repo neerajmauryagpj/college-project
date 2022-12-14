@@ -1,0 +1,28 @@
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    width: 100%;
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+        border-radius: 0px;
+        .css-hdw1oc {
+            display: none;
+        }
+    }
+    .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+        padding: 9px 12px;
+    }
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+        top:0;
+    }
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:focus .MuiOutlinedInput-notchedOutline{
+        border-color:inherit;
+    }
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+        border-width:1px;
+    }
+    .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+        display: none;
+    }
+}
+.css-viou3o-MuiAutocomplete-root{
+    
+}
